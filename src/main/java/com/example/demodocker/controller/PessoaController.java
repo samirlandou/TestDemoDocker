@@ -10,10 +10,11 @@ import org.springframework.web.bind.annotation.RestController;
 
 
 /**
- * HelloController
+ * HelloControllerOOO
  */
 @RestController
 @RequestMapping(value = "/pessoa")
+//@Profile("dev") define profile with this annotation to PessoaController profile's instance
 public class PessoaController {
 
     /*
@@ -21,12 +22,12 @@ public class PessoaController {
     public String getMethodName() {
         return "Olá vscode";
     }*/
-    
+
     @RequestMapping(value = "/nome-completo", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON)
     public PessoaDomain getNomePessoa(){
         var pessoaDomain = new PessoaDomain();
 
-        pessoaDomain.setNome("Samir");
+        pessoaDomain.setNome("Samir Kolawolé Akanni");
         pessoaDomain.setSobreNome("Landou");
 
         return pessoaDomain;
